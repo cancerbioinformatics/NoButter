@@ -1,4 +1,4 @@
-## Introduction
+## NoButter
 
 The CosMX Spatial Molecular Imager (SMI) offers a high-plex in-situ based solution to spatial multiomics analysis, allowing for the quantification and visualisation of RNA and protein analytes at cellular and subcellular resolution. By leveraging CosMx SMI, individual cells can be identified in their natural environment in both formalin-fixed paraffin-embedded (FFPE) and fresh frozen (FF) tissue samples.
 
