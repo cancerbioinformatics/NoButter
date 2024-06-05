@@ -1,8 +1,11 @@
 ## NoButter
 
-The CosMX Spatial Molecular Imager (SMI) offers a high-plex in-situ based solution to spatial multiomics analysis, allowing for the quantification and visualisation of RNA and protein analytes at cellular and subcellular resolution. By leveraging CosMx SMI, individual cells can be identified in their natural environment in both formalin-fixed paraffin-embedded (FFPE) and fresh frozen (FF) tissue samples.
+R toolkit for the analysis of transcript distribution across Z stacks in CosMx Spatial Molecular Imaging (SMI) data. 
 
-The CosMx experimental workflow involves first sectioning tissue into thin slices, typically 5 µm in size. Probes are then applied to these sections to hybridize with target RNA or protein analytes. Following this, the tissue sample is washed, and incubated with oligolabeled antibodies required for cell segmentation staining. 
+
+## Background
+
+CosMX SMI offers a high-plex in-situ based solution to spatial multiomics analysis, allowing for the quantification and visualisation of RNA and protein analytes at cellular and subcellular resolution. The experimental workflow involves first sectioning tissue (FFPE/FF) into thin slices, typically 5 µm in size. Probes are then applied to these sections to hybridize with target RNA or protein analytes. Following this, the tissue sample is washed, and incubated with oligolabeled antibodies required for cell segmentation staining. 
 
 The flow cell is then assembled and loaded onto the CosMx SMI instrument for imaging. Here, Fields of View (FOV) are selected, which represent areas within the tissue (up to 300mm2) that will be imaged. The instrument automates rounds of reporter binding and fluorescent imaging to read out the barcodes on each imaged RNA probe or protein antibody.
 
