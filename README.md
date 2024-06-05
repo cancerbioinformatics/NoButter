@@ -1,6 +1,8 @@
 ## NoButter
 
-R toolkit for the analysis of transcript distribution across Z stacks in CosMx Spatial Molecular Imaging (SMI) data. 
+R toolkit for the analysis of transcript distribution across Z stacks in CosMx Spatial Molecular Imaging (SMI) data.
+
+Developed and maintained by the Cancer Bioinformatics Group at King's College London (https://cancerbioinformatics.co.uk).
 
 
 ## Background
