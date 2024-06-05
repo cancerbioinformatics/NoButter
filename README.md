@@ -10,4 +10,4 @@ install.packages("devtools")
 library(devtools)
 
 # Install the package
-install_github("BeibhinnOH/NoButter")
+devtools::install_github("BeibhinnOH/NoButter")
