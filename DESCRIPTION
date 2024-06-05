@@ -1,6 +1,6 @@
 Package: NoButter
 Type: Package
-Title: Investigate Transcript Distribution Across Z Stacks from CosMx SMI Data
+Title: Investigate Transcript Distribution Across Z Stacks in CosMx SMI Data
 Version: 0.1.0
 Author: Béibhinn O'Hora, Roman Laddach
 Description: Provides tools to analyse and clean raw transcript data with a focus on their distribution across Z stacks from CosMx Spatial Molecular Imaging (SMI) datasets. Includes functions for updating flat files necessary to carry out downstream analysis. Use four spaces when indenting paragraphs within the Description.
