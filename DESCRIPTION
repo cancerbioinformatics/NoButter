@@ -18,3 +18,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/BeibhinnOH/NoButter
+BugReports: https://github.com/BeibhinnOH/NoButter/issues
