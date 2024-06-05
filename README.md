@@ -4,7 +4,7 @@ The CosMX Spatial Molecular Imager (SMI) offers a high-plex in-situ based soluti
 
 The CosMx experimental workflow involves first sectioning tissue into thin slices, typically 5 µm in size. Probes are then applied to these sections to hybridize with target RNA or protein analytes. Following this, the tissue sample is washed, and incubated with oligolabeled antibodies required for cell segmentation staining. 
 
-When the washing is complete, the flow cell is assembled and loaded onto the CosMx SMI instrument for imaging. Here, Fields of View (FOV) are selected, which represent areas within the tissue (up to 300mm2) that will be imaged. The instrument automates rounds of reporter binding and fluorescent imaging to read out the barcodes on each imaged RNA probe or protein antibody.
+The flow cell is then assembled and loaded onto the CosMx SMI instrument for imaging. Here, Fields of View (FOV) are selected, which represent areas within the tissue (up to 300mm2) that will be imaged. The instrument automates rounds of reporter binding and fluorescent imaging to read out the barcodes on each imaged RNA probe or protein antibody.
 
 During the imaging process, images are captured at multiple focal planes along the Z-axix called Z stacks. Z stacks are used in the morphology and cell segmentation process. Each Z stack represents a ~0.8um tissue slice, used to reconstruct a 3D image of the tissue. Z stacks are subsequently collapsed into 2D representations and transferred to the AtoMx Spatial Informatics Platform (SIP), alongside the CosMx data readout.
 
