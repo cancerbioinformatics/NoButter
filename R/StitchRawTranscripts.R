@@ -1,6 +1,6 @@
-#' Stitch Raw Transcripts
+#' Combine Raw Transcripts
 #'
-#' This function stitches together raw transcript data from multiple FOV files in a specified input directory (typically found in AnalysisResults of raw Atomx export data)
+#' This function combines raw transcript data from multiple FOV files in a specified input directory (typically found in AnalysisResults of raw Atomx export data)
 #' and saves the combined data to a CSV file in a specified output directory.
 #'
 #' @param in_dir A string specifying the path to the input directory containing the raw transcript information for each FOV.
@@ -20,12 +20,12 @@
 #'
 #' @examples
 #' \dontrun{
-#' raw_transcripts <- StitchRawTranscripts("path/to/input/directory", "path/to/output/directory")
-#' raw_transcripts <- StitchRawTranscripts("path/to/input/directory", "path/to/output/directory", "custom_file_name.csv")
+#' raw_transcripts <- CombineRawTranscripts("path/to/input/directory", "path/to/output/directory")
+#' raw_transcripts <- CombineRawTranscripts("path/to/input/directory", "path/to/output/directory", "custom_file_name.csv")
 #' }
 #'
 #' @export
-StitchRawTranscripts <- function(in_dir, out_dir, file_name = "raw_transcripts_stitched.csv") {
+CombineRawTranscripts <- function(in_dir, out_dir, file_name = "raw_transcripts.csv") {
 
   if (!dir.exists(in_dir)) {
     stop("Input directory does not exist: ", in_dir)
