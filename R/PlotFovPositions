@@ -1,0 +1,78 @@
+#' Plot FOV Positions
+#'
+#' This function plots the positions of fields of view (FOV) on a 2D plot using either millimeters or pixels for the coordinates.
+#'
+#' @param fovPositions A data frame containing the positions of the fields of view. It must contain columns for the X and Y coordinates in the specified units.
+#' @param units A character string specifying the units for the coordinates. Must be either "mm" (millimeters) or "px" (pixels). Defaults to "mm".
+#' @param region_col An optional character string specifying the column name for the region. If provided, the points will be colored according to this column.
+#'
+#' @return A ggplot2 object representing the plot of the FOV positions.
+#'
+#' @details
+#' The function will create a scatter plot of the FOV positions with optional coloring by region. The points will be labeled with the FOV names.
+#' The units parameter determines whether the coordinates are interpreted as millimeters or pixels, and the corresponding labels will be applied to the axes.
+#'
+#' @examples
+#' # Example usage:
+#' plt <- PlotFovPositions(fovPositions, units = "mm", region_col = "region")
+#' print(plt)
+#'
+#' @export
+PlotFovPositions <- function(fovPositions, units = "mm", region_col = NULL) {
+  # Determine the correct column names based on the chosen units
+  if (units == "mm") {
+    x_col <- "X_mm"
+    y_col <- "Y_mm"
+    x_label <- "X Position (mm)"
+    y_label <- "Y Position (mm)"
+  } else if (units == "px") {
+    x_col <- "X_px"
+    y_col <- "Y_px"
+    x_label <- "X Position (px)"
+    y_label <- "Y Position (px)"
+  } else {
+    stop("Units must be either 'mm' or 'px'.")
+  }
+
+  # Create the plot
+  p <- ggplot(fovPositions, aes_string(x = x_col, y = y_col, label = "fov"))
+
+  # Add color by region if specified
+  if (!is.null(region_col)) {
+    p <- p + geom_point(aes_string(colour = region_col), size = 10, alpha = 0.6, shape = 15) +
+      scale_color_discrete(name = "Region")
+  } else {
+    p <- p + geom_point(size = 10, colour = "red", alpha = 0.6, shape = 15)
+  }
+
+  p <- p + geom_text(size = 4, color = "white", vjust = 0.5, hjust = 0.5) +
+    ggtitle("FOV Position") +
+    labs(x = x_label, y = y_label) +
+    theme(
+      plot.title = element_text(face = "bold", size = rel(1.5), hjust = 0.5),  # Plot title size
+      text = element_text(),
+      panel.background = element_rect(colour = NA, fill = "white"),
+      plot.background = element_rect(colour = NA, fill = "white"),
+      panel.border = element_blank(),
+      axis.title = element_text(face = "bold", size = rel(1.1)),  # Axis title size
+      axis.title.y = element_text(angle = 90, vjust = 2),
+      axis.title.x = element_text(vjust = -0.2),
+      axis.text = element_text(),
+      axis.line = element_line(colour = "black", size = 0.5),  # Thinner axis lines
+      axis.ticks = element_line(),
+      panel.grid.major = element_line(colour = "#f0f0f0"),
+      panel.grid.minor = element_blank(),
+      legend.key = element_rect(colour = NA),
+      legend.position = "bottom",
+      legend.direction = "horizontal",
+      legend.key.size = unit(0.5, "cm"),  # Increased key size for better spacing
+      legend.margin = margin(0, 0, 0, 0),  # Adjusted margin for better spacing
+      legend.title = element_text(face = "italic"),
+      legend.text = element_text(size = 10),  # Increased legend text size
+      plot.margin = unit(c(10, 5, 5, 5), "mm"),
+      strip.background = element_rect(colour = "#f0f0f0", fill = "#f0f0f0"),
+      strip.text = element_text(face = "bold")
+    )
+
+  return(p)
+}
