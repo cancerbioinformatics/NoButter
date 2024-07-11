@@ -1,0 +1,41 @@
+Summary Statistics - Run: _76ed1d6b-57d6-4076-9a09-09a6f1ded693 FOV: 41
+
+Target calls (types, total, mean, sdd, cv, min, max):
+Real:        950, 168394, 177, 1098.18, 6.20, 9, 32909
+Neg probes:  10, 392, 39, 13.9348, 0.36, 19, 66
+False codes: 197, 7806, 39, 53.6868, 1.38, 7, 536
+Total:       1157, 176592
+
+Limits of Detection (3 sigma):
+Neg probes:  80
+False codes: 200
+
+Calls Above False Code LOD:
+Real:        148
+Neg probes:  0
+False codes: 4
+
+Calls Above Negative Probe LOD:
+Real:        424
+Neg probes:  0
+False codes: 13
+
+Overall error rates (mean error counts/mean real counts):
+Experimental error (%):  22.034, negative/real
+Matching error (%):      22.034, false/real
+Matching efficiency (%): 2.11, 7996885
+
+Total Calls by Z slice:
+  Slice(  0):          268
+  Slice(  1):        22560
+  Slice(  2):        41991
+  Slice(  3):        31674
+  Slice(  4):        24117
+  Slice(  5):        18029
+  Slice(  6):        14183
+  Slice(  7):        11874
+  Slice(  8):        11647
+  Slice(  9):          249
+
+Processing time (secs): 462.263
+Success processing FOV: 41 from Run Number: _76ed1d6b-57d6-4076-9a09-09a6f1ded693
