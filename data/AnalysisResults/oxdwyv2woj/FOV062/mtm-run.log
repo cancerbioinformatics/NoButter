@@ -1,0 +1,266 @@
+2023-08-22 13:31:22,744 [1] INFO  - Using bucket s3-euw1-eu2-datarepository-eu2-eu2-kcl-01 and region eu-west-1
+2023-08-22 13:31:22,797 [1] INFO  - Using role to access S3
+2023-08-22 13:31:23,077 [1] INFO  - ===============================
+2023-08-22 13:31:23,077 [1] INFO  - build info: 
+commit 1860d865ce7409a4b25d5549a62e2b7be0a93d33
+Author: alexander-serebriyan <alexander.serebriyan@teamdev.com>
+Date:   Fri Feb 10 15:42:48 2023 +0100
+
+    Add UAT env for ECR pushing.
+
+Build done on: Fri Feb 10 14:46:39 UTC 2023
+Version: 20230210.1
+
+2023-08-22 13:31:23,077 [1] INFO  - ===============================
+2023-08-22 13:31:23,077 [1] INFO  - Starting the job. Results will be uploaded to: 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/AnalysisResults/oxdwyv2woj/FOV062
+2023-08-22 13:31:23,077 [1] INFO  - Checking FOV status. Ref: oxdwyv2woj-51ju5, ID: 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/SpotFiles/FOV062/
+2023-08-22 13:31:23,285 [1] INFO  - Executing with retries set to: 10
+2023-08-22 13:31:23,286 [1] INFO  - Setting fov oxdwyv2woj-51ju5 into status InProgress
+2023-08-22 13:31:23,288 [1] INFO  - Saving a fov processing run: oxdwyv2woj-51ju5
+2023-08-22 13:31:23,288 [1] INFO  - Updating an existing fov run.
+2023-08-22 13:31:23,344 [1] INFO  - Downloading FOV using next path: 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/SpotFiles/FOV062/
+2023-08-22 13:31:23,345 [1] INFO  - Start downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/SpotFiles/FOV062/
+2023-08-22 13:31:23,345 [1] INFO  - Executing with retries set to: 10
+2023-08-22 13:35:27,459 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/SpotFiles/FOV062/ complete
+2023-08-22 13:35:27,459 [1] INFO  - Custom plex file specified. The default one will be overriden.
+2023-08-22 13:35:27,459 [1] INFO  - Downloading plex file using next path: 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/plex-oxdwyv2woj.txt
+2023-08-22 13:35:27,459 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/plex-oxdwyv2woj.txt
+2023-08-22 13:35:27,578 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/plex-oxdwyv2woj.txt finished
+2023-08-22 13:35:27,579 [1] INFO  - No user params file specified. Trying to use the one from the storage.
+2023-08-22 13:35:27,579 [1] INFO  - Downloading params file using next path: 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/analysis_params_v6.txt
+2023-08-22 13:35:27,579 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/analysis_params_v6.txt
+2023-08-22 13:35:27,608 [1] ERROR -    at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionStream(IRequestContext requestContext, IWebResponseData httpErrorResponse, HttpErrorResponseException exception, Stream responseStream)
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionAsync(IExecutionContext executionContext, HttpErrorResponseException exception)
+   at Amazon.Runtime.Internal.ExceptionHandler`1.HandleAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessExceptionAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Transfer.Internal.DownloadCommand.ExecuteAsync(CancellationToken cancellationToken)
+   at Amazon.S3.Transfer.TransferUtility.Download(String filePath, String bucketName, String key)
+   at Core.S3FileStorageService.DownloadFile(String remoteFilePath, String localFilePath) in /src/Core/S3FileStorageService.cs:line 67
+   at MTMCWorker.Service.Impl.MtmcWorker.FetchParamsFile(String paramsFileRef, String flowCellPath) in /src/MTMCWorker/Service/Impl/MtmcWorker.cs:line 297
+2023-08-22 13:35:27,608 [1] INFO  - Can't download params file next to nBCDir. Using the default one.
+Amazon.S3.AmazonS3Exception: The specified key does not exist.
+ ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken)
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionStream(IRequestContext requestContext, IWebResponseData httpErrorResponse, HttpErrorResponseException exception, Stream responseStream)
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionAsync(IExecutionContext executionContext, HttpErrorResponseException exception)
+   at Amazon.Runtime.Internal.ExceptionHandler`1.HandleAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessExceptionAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Transfer.Internal.DownloadCommand.ExecuteAsync(CancellationToken cancellationToken)
+   at Amazon.S3.Transfer.TransferUtility.Download(String filePath, String bucketName, String key)
+   at Core.S3FileStorageService.DownloadFile(String remoteFilePath, String localFilePath) in /src/Core/S3FileStorageService.cs:line 67
+   at MTMCWorker.Service.Impl.MtmcWorker.FetchParamsFile(String paramsFileRef, String flowCellPath) in /src/MTMCWorker/Service/Impl/MtmcWorker.cs:line 297
+2023-08-22 13:35:27,610 [1] INFO  - Fetching CellStatsDir folder data...
+2023-08-22 13:35:27,689 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/CellComposite/CellComposite_F062.jpg
+2023-08-22 13:35:27,871 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/CellComposite/CellComposite_F062.jpg finished
+2023-08-22 13:35:27,871 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/CellOverlay/CellOverlay_F062.jpg
+2023-08-22 13:35:28,240 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/CellOverlay/CellOverlay_F062.jpg finished
+2023-08-22 13:35:28,240 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/FOV062/CellLabels_F062.tif
+2023-08-22 13:35:28,428 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/FOV062/CellLabels_F062.tif finished
+2023-08-22 13:35:28,428 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/FOV062/CompartmentLabels_F062.tif
+2023-08-22 13:35:28,652 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/FOV062/CompartmentLabels_F062.tif finished
+2023-08-22 13:35:28,652 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/FOV062/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_175305_S1_Cell_Stats_F062.csv
+2023-08-22 13:35:28,841 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/FOV062/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_175305_S1_Cell_Stats_F062.csv finished
+2023-08-22 13:35:28,842 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/Morphology2D/20230817_175305_S1_C902_P99_N99_F062.TIF
+2023-08-22 13:35:30,310 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/Morphology2D/20230817_175305_S1_C902_P99_N99_F062.TIF finished
+2023-08-22 13:35:30,310 [1] INFO  - Downloading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/RnD/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_175305_S1_Summary_F062.csv
+2023-08-22 13:35:30,464 [1] INFO  - Download 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/CellStatsDir/RnD/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_175305_S1_Summary_F062.csv finished
+2023-08-22 13:35:30,464 [1] INFO  - CellStatsDir data download complete.
+2023-08-22 13:35:30,464 [1] INFO  - FOV downloaded successfully.
+2023-08-22 13:35:30,464 [1] INFO  - Preparing dirs structure for mtmc
+2023-08-22 13:35:30,464 [1] INFO  - Preparing mtmc input. FOV dir: FOV062
+2023-08-22 13:35:30,467 [1] INFO  - Running mtmc...
+2023-08-22 13:35:30,475 [24] INFO  - directory: "/app/input_data/"
+2023-08-22 13:35:30,775 [14] INFO  - directory: "/app/out/FOV062/"
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:35:30,F062,Z,0,iter,0,feat,0,0, Reading and combining input data, 0.027297, sec
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:35:43,F062,Z,0,iter,0,feat,3821825,3821825, Spot file data loading and filtration , 12.0778, sec
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:35:46,F062,Z,0,iter,0,feat,3821825,3821825, Seed neighbor determination, 4.79846, sec
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:35:50,F062,Z,0,iter,0,feat,3821825,3821825, Quality Score Generation, 7.95891, sec
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:35:59,F062,Z,0,iter,0,feat,3821825,3821825, Spots per feature calculation and feature filtration, 8.49419, sec
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:36:05,F062,Z,0,iter,0,feat,3821825,3821825, Making Complete Code Target Calls, 5.35335, sec
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:36:07,F062,Z,0,iter,0,feat,3821825,3821825, Target Call Location Estimation and iteration end update, 1.83804, sec
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:36:07,F062,Z,0,iter,0,feat,3821825,3821825, Iteration summary generation, 0.008459, sec
+2023-08-22 13:42:18,565 [26] INFO  - 2023-08-22 13:36:07,F062,Z,0,iter,0,feat,3821825,3821825, Iteration duration, 26.3581, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:36:10,F062,Z,0,iter,1,feat,3821825,3821825, Seed neighbor determination, 4.89912, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:36:16,F062,Z,0,iter,1,feat,3821825,3821825, Quality Score Generation, 10.6833, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:36:24,F062,Z,0,iter,1,feat,3821825,3821825, Spots per feature calculation and feature filtration, 6.95661, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:36:34,F062,Z,0,iter,1,feat,3821825,3821825, Making Complete Code Target Calls, 7.57111, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:36:38,F062,Z,0,iter,1,feat,3821825,3821825, Target Call Location Estimation and iteration end update, 2.88569, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:36:38,F062,Z,0,iter,1,feat,3821825,3821825, Iteration summary generation, 0.235531, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:36:38,F062,Z,0,iter,1,feat,3821825,3821825, Iteration duration, 31.1772, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:36:39,F062,Z,0,iter,1,feat,3821825,3821825, Z slice processing duration, 69.637, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:37:27,F062,Z,1,iter,0,feat,7151645,10973470, Spot file data loading and filtration , 38.281, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:37:35,F062,Z,1,iter,0,feat,7151645,10973470, Seed neighbor determination, 10.6071, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:37:47,F062,Z,1,iter,0,feat,7151645,10973470, Quality Score Generation, 25.2659, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:38:06,F062,Z,1,iter,0,feat,7151645,10973470, Spots per feature calculation and feature filtration, 14.4095, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:38:36,F062,Z,1,iter,0,feat,7151645,10973470, Making Complete Code Target Calls, 22.7247, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:38:52,F062,Z,1,iter,0,feat,7151645,10973470, Target Call Location Estimation and iteration end update, 10.3535, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:38:52,F062,Z,1,iter,0,feat,7151645,10973470, Iteration summary generation, 0.110649, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:38:52,F062,Z,1,iter,0,feat,7151645,10973470, Iteration duration, 79.3136, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:38:59,F062,Z,1,iter,1,feat,7151645,10973470, Seed neighbor determination, 13.1896, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:39:14,F062,Z,1,iter,1,feat,7151645,10973470, Quality Score Generation, 38.4467, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:39:25,F062,Z,1,iter,1,feat,7151645,10973470, Spots per feature calculation and feature filtration, 10.691, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:39:58,F062,Z,1,iter,1,feat,7151645,10973470, Making Complete Code Target Calls, 21.8292, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:40:05,F062,Z,1,iter,1,feat,7151645,10973470, Target Call Location Estimation and iteration end update, 5.92477, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:40:06,F062,Z,1,iter,1,feat,7151645,10973470, Iteration summary generation, 1.2129, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:40:06,F062,Z,1,iter,1,feat,7151645,10973470, Iteration duration, 85.3898, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:40:06,F062,Z,1,iter,1,feat,7151645,10973470, Z slice processing duration, 205.594, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:41:00,F062,Z,2,iter,0,feat,6352488,17325958, Spot file data loading and filtration , 36.1954, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:41:06,F062,Z,2,iter,0,feat,6352488,17325958, Seed neighbor determination, 9.42416, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:41:19,F062,Z,2,iter,0,feat,6352488,17325958, Quality Score Generation, 32.5708, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:41:37,F062,Z,2,iter,0,feat,6352488,17325958, Spots per feature calculation and feature filtration, 11.6718, sec
+2023-08-22 13:42:18,573 [37] INFO  - 2023-08-22 13:42:08,F062,Z,2,iter,0,feat,6352488,17325958, Making Complete Code Target Calls, 20.36, sec
+2023-08-22 13:49:28,649 [34] INFO  - 2023-08-22 13:42:18,F062,Z,2,iter,0,feat,6352488,17325958, Target Call Location Estimation and iteration end update, 8.26505, sec
+2023-08-22 13:49:28,654 [34] INFO  - 2023-08-22 13:42:18,F062,Z,2,iter,0,feat,6352488,17325958, Iteration summary generation, 0.071954, sec
+2023-08-22 13:49:28,655 [34] INFO  - 2023-08-22 13:42:18,F062,Z,2,iter,0,feat,6352488,17325958, Iteration duration, 78.4586, sec
+2023-08-22 13:49:28,655 [34] INFO  - 2023-08-22 13:42:25,F062,Z,2,iter,1,feat,6352488,17325958, Seed neighbor determination, 8.92385, sec
+2023-08-22 13:49:28,655 [34] INFO  - 2023-08-22 13:42:36,F062,Z,2,iter,1,feat,6352488,17325958, Quality Score Generation, 21.8376, sec
+2023-08-22 13:49:28,655 [34] INFO  - 2023-08-22 13:42:49,F062,Z,2,iter,1,feat,6352488,17325958, Spots per feature calculation and feature filtration, 9.61164, sec
+2023-08-22 13:49:28,655 [34] INFO  - 2023-08-22 13:43:31,F062,Z,2,iter,1,feat,6352488,17325958, Making Complete Code Target Calls, 29.26, sec
+2023-08-22 13:49:28,655 [34] INFO  - 2023-08-22 13:43:44,F062,Z,2,iter,1,feat,6352488,17325958, Target Call Location Estimation and iteration end update, 11.1122, sec
+2023-08-22 13:49:28,655 [34] INFO  - 2023-08-22 13:43:46,F062,Z,2,iter,1,feat,6352488,17325958, Iteration summary generation, 1.77342, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:43:46,F062,Z,2,iter,1,feat,6352488,17325958, Iteration duration, 78.8778, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:43:46,F062,Z,2,iter,1,feat,6352488,17325958, Z slice processing duration, 200.249, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:44:36,F062,Z,3,iter,0,feat,5655686,22981644, Spot file data loading and filtration , 42.194, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:44:40,F062,Z,3,iter,0,feat,5655686,22981644, Seed neighbor determination, 8.18952, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:44:51,F062,Z,3,iter,0,feat,5655686,22981644, Quality Score Generation, 17.1096, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:45:10,F062,Z,3,iter,0,feat,5655686,22981644, Spots per feature calculation and feature filtration, 10.4893, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:45:35,F062,Z,3,iter,0,feat,5655686,22981644, Making Complete Code Target Calls, 20.0346, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:45:49,F062,Z,3,iter,0,feat,5655686,22981644, Target Call Location Estimation and iteration end update, 7.67817, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:45:49,F062,Z,3,iter,0,feat,5655686,22981644, Iteration summary generation, 0.065992, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:45:49,F062,Z,3,iter,0,feat,5655686,22981644, Iteration duration, 60.2086, sec
+2023-08-22 13:49:28,657 [34] INFO  - 2023-08-22 13:45:53,F062,Z,3,iter,1,feat,5655686,22981644, Seed neighbor determination, 7.84642, sec
+2023-08-22 13:49:28,658 [34] INFO  - 2023-08-22 13:46:08,F062,Z,3,iter,1,feat,5655686,22981644, Quality Score Generation, 26.119, sec
+2023-08-22 13:49:28,658 [34] INFO  - 2023-08-22 13:46:19,F062,Z,3,iter,1,feat,5655686,22981644, Spots per feature calculation and feature filtration, 8.18231, sec
+2023-08-22 13:49:28,658 [34] INFO  - 2023-08-22 13:46:45,F062,Z,3,iter,1,feat,5655686,22981644, Making Complete Code Target Calls, 20.5161, sec
+2023-08-22 13:49:28,658 [34] INFO  - 2023-08-22 13:46:51,F062,Z,3,iter,1,feat,5655686,22981644, Target Call Location Estimation and iteration end update, 5.88571, sec
+2023-08-22 13:49:28,658 [34] INFO  - 2023-08-22 13:46:52,F062,Z,3,iter,1,feat,5655686,22981644, Iteration summary generation, 1.31047, sec
+2023-08-22 13:49:28,658 [34] INFO  - 2023-08-22 13:46:52,F062,Z,3,iter,1,feat,5655686,22981644, Iteration duration, 66.6026, sec
+2023-08-22 13:49:28,658 [34] INFO  - 2023-08-22 13:46:52,F062,Z,3,iter,1,feat,5655686,22981644, Z slice processing duration, 173.56, sec
+2023-08-22 13:49:28,658 [34] INFO  - 2023-08-22 13:47:35,F062,Z,4,iter,0,feat,5177131,28158775, Spot file data loading and filtration , 29.6375, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:47:39,F062,Z,4,iter,0,feat,5177131,28158775, Seed neighbor determination, 8.12442, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:47:50,F062,Z,4,iter,0,feat,5177131,28158775, Quality Score Generation, 18.5239, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:48:02,F062,Z,4,iter,0,feat,5177131,28158775, Spots per feature calculation and feature filtration, 9.81999, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:48:26,F062,Z,4,iter,0,feat,5177131,28158775, Making Complete Code Target Calls, 19.9138, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:48:36,F062,Z,4,iter,0,feat,5177131,28158775, Target Call Location Estimation and iteration end update, 7.17938, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:48:36,F062,Z,4,iter,0,feat,5177131,28158775, Iteration summary generation, 0.064785, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:48:36,F062,Z,4,iter,0,feat,5177131,28158775, Iteration duration, 60.274, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:48:40,F062,Z,4,iter,1,feat,5177131,28158775, Seed neighbor determination, 6.52367, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:48:52,F062,Z,4,iter,1,feat,5177131,28158775, Quality Score Generation, 19.2227, sec
+2023-08-22 13:49:28,661 [34] INFO  - 2023-08-22 13:49:01,F062,Z,4,iter,1,feat,5177131,28158775, Spots per feature calculation and feature filtration, 7.52994, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:49:28,F062,Z,4,iter,1,feat,5177131,28158775, Making Complete Code Target Calls, 26.3451, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:49:35,F062,Z,4,iter,1,feat,5177131,28158775, Target Call Location Estimation and iteration end update, 6.7851, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:49:36,F062,Z,4,iter,1,feat,5177131,28158775, Iteration summary generation, 1.2278, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:49:36,F062,Z,4,iter,1,feat,5177131,28158775, Iteration duration, 65.0513, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:49:36,F062,Z,4,iter,1,feat,5177131,28158775, Z slice processing duration, 158.978, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:50:09,F062,Z,5,iter,0,feat,4781632,32940407, Spot file data loading and filtration , 26.9836, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:50:13,F062,Z,5,iter,0,feat,4781632,32940407, Seed neighbor determination, 6.78609, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:50:21,F062,Z,5,iter,0,feat,4781632,32940407, Quality Score Generation, 18.4215, sec
+2023-08-22 13:53:43,325 [34] INFO  - 2023-08-22 13:50:31,F062,Z,5,iter,0,feat,4781632,32940407, Spots per feature calculation and feature filtration, 8.95222, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:50:52,F062,Z,5,iter,0,feat,4781632,32940407, Making Complete Code Target Calls, 13.1812, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:50:57,F062,Z,5,iter,0,feat,4781632,32940407, Target Call Location Estimation and iteration end update, 4.69584, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:50:57,F062,Z,5,iter,0,feat,4781632,32940407, Iteration summary generation, 0.048057, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:50:57,F062,Z,5,iter,0,feat,4781632,32940407, Iteration duration, 49.418, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:51:00,F062,Z,5,iter,1,feat,4781632,32940407, Seed neighbor determination, 6.68952, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:51:09,F062,Z,5,iter,1,feat,4781632,32940407, Quality Score Generation, 22.1443, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:51:16,F062,Z,5,iter,1,feat,4781632,32940407, Spots per feature calculation and feature filtration, 6.64684, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:51:31,F062,Z,5,iter,1,feat,4781632,32940407, Making Complete Code Target Calls, 14.0865, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:51:32,F062,Z,5,iter,1,feat,4781632,32940407, Target Call Location Estimation and iteration end update, 1.52991, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:51:33,F062,Z,5,iter,1,feat,4781632,32940407, Iteration summary generation, 0.752953, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:51:33,F062,Z,5,iter,1,feat,4781632,32940407, Iteration duration, 49.027, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:51:33,F062,Z,5,iter,1,feat,4781632,32940407, Z slice processing duration, 128.737, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:52:00,F062,Z,6,iter,0,feat,4511923,37452330, Spot file data loading and filtration , 22.2327, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:52:03,F062,Z,6,iter,0,feat,4511923,37452330, Seed neighbor determination, 5.56437, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:52:06,F062,Z,6,iter,0,feat,4511923,37452330, Quality Score Generation, 11.6368, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:52:15,F062,Z,6,iter,0,feat,4511923,37452330, Spots per feature calculation and feature filtration, 8.61284, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:52:29,F062,Z,6,iter,0,feat,4511923,37452330, Making Complete Code Target Calls, 13.2951, sec
+2023-08-22 13:53:43,325 [58] INFO  - 2023-08-22 13:52:36,F062,Z,6,iter,0,feat,4511923,37452330, Target Call Location Estimation and iteration end update, 7.4771, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:52:36,F062,Z,6,iter,0,feat,4511923,37452330, Iteration summary generation, 0.061586, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:52:36,F062,Z,6,iter,0,feat,4511923,37452330, Iteration duration, 44.4167, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:52:39,F062,Z,6,iter,1,feat,4511923,37452330, Seed neighbor determination, 6.31309, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:52:44,F062,Z,6,iter,1,feat,4511923,37452330, Quality Score Generation, 17.3038, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:52:50,F062,Z,6,iter,1,feat,4511923,37452330, Spots per feature calculation and feature filtration, 6.43288, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:53:10,F062,Z,6,iter,1,feat,4511923,37452330, Making Complete Code Target Calls, 19.2257, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:53:14,F062,Z,6,iter,1,feat,4511923,37452330, Target Call Location Estimation and iteration end update, 4.34472, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:53:15,F062,Z,6,iter,1,feat,4511923,37452330, Iteration summary generation, 0.770859, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:53:15,F062,Z,6,iter,1,feat,4511923,37452330, Iteration duration, 51.819, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:53:15,F062,Z,6,iter,1,feat,4511923,37452330, Z slice processing duration, 121.898, sec
+2023-08-22 13:53:43,326 [58] INFO  - 2023-08-22 13:53:40,F062,Z,7,iter,0,feat,4727519,42179849, Spot file data loading and filtration , 21.3944, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:53:43,F062,Z,7,iter,0,feat,4727519,42179849, Seed neighbor determination, 6.04668, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:53:46,F062,Z,7,iter,0,feat,4727519,42179849, Quality Score Generation, 11.9141, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:53:55,F062,Z,7,iter,0,feat,4727519,42179849, Spots per feature calculation and feature filtration, 8.64156, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:09,F062,Z,7,iter,0,feat,4727519,42179849, Making Complete Code Target Calls, 13.1865, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:13,F062,Z,7,iter,0,feat,4727519,42179849, Target Call Location Estimation and iteration end update, 4.60671, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:13,F062,Z,7,iter,0,feat,4727519,42179849, Iteration summary generation, 0.042667, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:13,F062,Z,7,iter,0,feat,4727519,42179849, Iteration duration, 41.8897, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:16,F062,Z,7,iter,1,feat,4727519,42179849, Seed neighbor determination, 4.81927, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:22,F062,Z,7,iter,1,feat,4727519,42179849, Quality Score Generation, 22.7807, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:29,F062,Z,7,iter,1,feat,4727519,42179849, Spots per feature calculation and feature filtration, 7.11871, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:48,F062,Z,7,iter,1,feat,4727519,42179849, Making Complete Code Target Calls, 16.8861, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:53,F062,Z,7,iter,1,feat,4727519,42179849, Target Call Location Estimation and iteration end update, 5.41061, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:54,F062,Z,7,iter,1,feat,4727519,42179849, Iteration summary generation, 0.73499, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:54,F062,Z,7,iter,1,feat,4727519,42179849, Iteration duration, 55.8945, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:54:54,F062,Z,7,iter,1,feat,4727519,42179849, Z slice processing duration, 122.396, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:55:05,F062,Z,8,iter,0,feat,2350051,44529900, Spot file data loading and filtration , 8.81072, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:55:07,F062,Z,8,iter,0,feat,2350051,44529900, Seed neighbor determination, 3.13309, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:55:09,F062,Z,8,iter,0,feat,2350051,44529900, Quality Score Generation, 7.8439, sec
+2023-08-22 13:55:34,103 [58] INFO  - 2023-08-22 13:55:14,F062,Z,8,iter,0,feat,2350051,44529900, Spots per feature calculation and feature filtration, 4.76061, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:17,F062,Z,8,iter,0,feat,2350051,44529900, Making Complete Code Target Calls, 3.14161, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:18,F062,Z,8,iter,0,feat,2350051,44529900, Target Call Location Estimation and iteration end update, 0.907494, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:18,F062,Z,8,iter,0,feat,2350051,44529900, Iteration summary generation, 0.015698, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:18,F062,Z,8,iter,0,feat,2350051,44529900, Iteration duration, 18.5991, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:19,F062,Z,8,iter,1,feat,2350051,44529900, Seed neighbor determination, 2.88849, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:21,F062,Z,8,iter,1,feat,2350051,44529900, Quality Score Generation, 6.54405, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:25,F062,Z,8,iter,1,feat,2350051,44529900, Spots per feature calculation and feature filtration, 3.65884, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:29,F062,Z,8,iter,1,feat,2350051,44529900, Making Complete Code Target Calls, 4.28922, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:30,F062,Z,8,iter,1,feat,2350051,44529900, Target Call Location Estimation and iteration end update, 0.60711, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:30,F062,Z,8,iter,1,feat,2350051,44529900, Iteration summary generation, 0.286847, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:30,F062,Z,8,iter,1,feat,2350051,44529900, Iteration duration, 17.0914, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:30,F062,Z,8,iter,1,feat,2350051,44529900, Z slice processing duration, 46.931, sec
+2023-08-22 13:55:34,104 [54] INFO  - 2023-08-22 13:55:34,F062,Z,8,iter,1,feat,2350051,44529900, FOV processing duration (final) , 1231.58, sec
+2023-08-22 13:55:34,129 [54] INFO  - Exited
+2023-08-22 13:55:34,129 [54] INFO  - System.EventArgs
+2023-08-22 13:55:34,130 [54] INFO  - { }
+2023-08-22 13:55:34,131 [1] INFO  - mtmc run complete
+2023-08-22 13:55:34,131 [1] INFO  - Zipping and uploading results...
+2023-08-22 13:55:34,131 [1] INFO  - Uploading mtm results to storage.
+2023-08-22 13:55:34,132 [1] INFO  - Start uploading /app/out/FOV062 to 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/AnalysisResults/oxdwyv2woj/FOV062
+2023-08-22 13:55:34,132 [1] INFO  - Executing with retries set to: 10
+2023-08-22 13:55:35,881 [1] INFO  - Upload /app/out/FOV062 finished
+2023-08-22 13:55:35,881 [1] INFO  - Results uploaded.
+2023-08-22 13:55:35,881 [1] INFO  - All done
+2023-08-22 13:55:35,881 [1] INFO  - Executing with retries set to: 10
+2023-08-22 13:55:35,882 [1] INFO  - Setting fov oxdwyv2woj-51ju5 into status Completed
+2023-08-22 13:55:35,896 [1] INFO  - Saving a fov processing run: oxdwyv2woj-51ju5
+2023-08-22 13:55:35,896 [1] INFO  - Updating an existing fov run.
+2023-08-22 13:55:35,898 [1] INFO  - Uploading logs
+2023-08-22 13:55:35,899 [1] INFO  - Start uploading 892d9dcc-e56d-475c-8dee-2c395064223d/2302H0033/c9d29823-a69c-4328-a6b9-53e2b78fa3e3/Run_76ed1d6b-57d6-4076-9a09-09a6f1ded693_20230817_2302h0033_ControlCenter/20230817_175305/20230817_175305_S1/AnalysisResults/oxdwyv2woj/FOV062/mtm-run.log
