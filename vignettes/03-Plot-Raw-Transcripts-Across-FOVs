@@ -1,0 +1,172 @@
+---
+title: "Plot Raw Transcripts Across FOVs"
+date: "2024-07-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Plot Raw Transcripts Across FOVs
+
+Having explored the raw transcript data, we can now move on to visualizing the distribution of transcripts across different FOVs. Visualizing the data across FOVs helps in identifying areas of interest that might require further investigation. 
+
+## Load FOV position information
+
+```{r}
+fovPositions = read.csv("../input/flat_files/fov_positions_file.csv", row.names = 1)
+head(fovPositions)
+```
+
+
+```{r, fig.height=7, fig.width=8}
+# plot fov poistions across flow cell
+p1 <- ggplot(fovPositions, aes(x=X_mm, y=Y_mm, label=fov)) + 
+  geom_point(size=10, colour="red", alpha=0.6, shape=15) + 
+  geom_text(size=4, color="white", vjust=0.5, hjust=0.5) +
+  theme_minimal() + 
+  ggtitle("FOV Positions") +
+  labs(x="X Position (mm)",
+       y="Y Position (mm)") +
+  theme(plot.title = element_text(size=16, face="bold"),
+        plot.subtitle = element_text(size=12),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
+        axis.text = element_text(size=10))
+p1
+```
+
+
+## Optional: Annotate FOVs into regions of interest (e.g. tissue, areas). 
+
+```{r}
+# tissue annotation
+fovPositions = fovPositions %>% mutate(tissue = case_when(
+  fov %in% c(14) ~ "tissue_01",
+  fov %in% c(1:13, 14:63) ~ "tissue_02",
+))
+
+# area annotation 
+fovPositions = fovPositions  %>% mutate(area = case_when(
+  fov %in% c(1, 19:23, 57, 62:63) ~ "area_01",
+  fov %in% c(15:18, 24, 25, 26:44) ~ "area_02",
+  fov %in% c(2:13, 45:61) ~ "area_03",
+  fov %in% c(14) ~ "area_04"
+))
+```
+
+
+```{r, fig.height=7, fig.width=8}
+# plotting FOV positions by area
+p2 <- ggplot(fovPositions, aes(x = X_mm, y = Y_mm, label = fov, colour = area)) + 
+  geom_point(size = 10, alpha = 0.6, shape = 15) + 
+  geom_text(size = 4, color = "white", vjust = 0.5, hjust = 0.5) +
+  theme_minimal() + 
+  ggtitle("FOV Positions by Area") +
+  labs(x = "X Position (mm)", y = "Y Position (mm)") +
+  scale_color_discrete(name = "Area") + 
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12),
+        axis.text = element_text(size = 10))
+
+p2
+```
+
+
+```{r, fig.height=7, fig.width=8}
+# plotting FOV positions by tissue
+p2 <- ggplot(fovPositions, aes(x = X_mm, y = Y_mm, label = fov, colour = tissue)) + 
+  geom_point(size = 10, alpha = 0.6, shape = 15) + 
+  geom_text(size = 4, color = "white", vjust = 0.5, hjust = 0.5) +
+  theme_minimal() + 
+  ggtitle("FOV Positions by Tissue") +
+  labs(x = "X Position (mm)", y = "Y Position (mm)") +
+  scale_color_discrete(name = "Area") + 
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12),
+        axis.text = element_text(size = 10))
+
+p2
+```
+
+
+
+## Optional: Convert X/Y positions from mm to px
+
+Here, we address the need to convert X and Y coordinates from millimeters (mm) to pixels (px) for use in spatial analysis tools requiring pixel dimensions. Starting with the metadata file, we calculate the difference between global and local coordinates to determine the necessary shifts for accurate coordinate transformations. We then identify the most frequently occurring conversion factor by analyzing these differences. Using this conversion factor, we transform the X and Y coordinates from millimeters to pixels in the fovPositions dataset, ensuring the data is compatible and accurately represented for subsequent analyses and interactive spatial tool applications.
+
+```{r}
+metadata = read.csv("../input/flat_files/metadata_file.csv")
+metadata$x_diff = metadata$CenterX_global_px - metadata$CenterX_local_px
+metadata = left_join(metadata, fovPositions, by="fov")
+metadata$coversion_x_factor = metadata$x_diff/metadata$X_mm
+
+conversion_factor = as.numeric(names(sort(table(metadata$coversion_x_factor),decreasing = TRUE)[1]))
+print(conversion_factor) 
+```
+
+```{r}
+fovPositions$X_px = fovPositions$X_mm * conversion_factor
+fovPositions$Y_px = fovPositions$Y_mm * conversion_factor
+head(fovPositions)
+```
+
+```{r, fig.width=10, fig.height=8}
+# checking orientation is correct in px
+p4 <- ggplot(fovPositions, aes(x=X_px, y=Y_px, label=fov)) + 
+  geom_point(size=10, colour="red", alpha=0.6, shape=15) + 
+  geom_text(size=4, color="white", vjust=0.5, hjust=0.5) +
+  theme_minimal() + 
+  ggtitle("FOV Position (pixels)") +
+  labs(x="X Position (px)",
+       y="Y Position (px)") +
+  theme(
+    plot.title = element_text(size=16, face="bold"),
+    plot.subtitle = element_text(size=12),
+    axis.title.x = element_text(size=12),
+    axis.title.y = element_text(size=12),
+    axis.text = element_text(size=10)
+  )
+
+p4 
+```
+
+
+```{r, echo=FALSE, include=FALSE}
+# save updated file
+write.csv(fovPositions, "../input/flat_files/processed/fovPositions.csv")
+```
+
+
+## Combining annotated fov information with transcripts file
+
+```{r}
+# join annotated fov information with transcripts file
+transcripts= left_join(transcripts, fovPositions, by="fov")
+transcripts = transcripts %>% select(-X_mm, -Y_mm, -X_px, -Y_px)
+head(transcripts)
+```
+
+
+```{r}
+# saving annotated transcripts
+write.csv(transcripts, "../input/combined_transcripts/annotated_transcripts.csv")
+```
+
+
+## Visualize transcripts by FOV
+
+In this visualization, users have the option to select either all fields of view (FOVs) or only specific FOVs that are particularly relevant to their analysis. We employ the *PlotTranscriptsByFOV()* function from the NoButter package to generate plots that display the spatial location of transcripts within these selected FOVs. Optionally, users can save these plots to a designated output directory.
+
+
+```{r, fig.width=6, fig.height=5,message=FALSE, warning=FALSE}
+FOVs_of_interest <- c(1, 30, 40, 47, 50, 56, 57)
+PlotTranscriptsByFOV(transcripts, fov = FOVs_of_interest)
+```
