@@ -1,0 +1,152 @@
+2023-08-22 13:36:42,F018,Z,0,iter,0,feat,0,0, Reading and combining input data, 0.051209, sec
+2023-08-22 13:36:42,F018,Z,-1,iter,0,feat,79901,79901, Spot file data loading and filtration , 0.054173, sec
+2023-08-22 13:36:42,F018,Z,-1,iter,0,feat,79901,79901, Seed neighbor determination, 0.109678, sec
+2023-08-22 13:36:42,F018,Z,-1,iter,0,feat,79901,79901, Quality Score Generation, 0.031909, sec
+2023-08-22 13:36:42,F018,Z,-1,iter,1,feat,79901,79901, Seed neighbor determination, 0.107696, sec
+2023-08-22 13:36:42,F018,Z,-1,iter,1,feat,79901,79901, Quality Score Generation, 0.029288, sec
+2023-08-22 13:36:42,F018,Z,-1,iter,1,feat,79901,79901, Z slice processing duration, 0.564999, sec
+2023-08-22 13:37:05,F018,Z,0,iter,0,feat,5328761,5408662, Spot file data loading and filtration , 21.193, sec
+2023-08-22 13:37:10,F018,Z,0,iter,0,feat,5328761,5408662, Seed neighbor determination, 7.26579, sec
+2023-08-22 13:37:17,F018,Z,0,iter,0,feat,5328761,5408662, Quality Score Generation, 15.0942, sec
+2023-08-22 13:37:33,F018,Z,0,iter,0,feat,5328761,5408662, Spots per feature calculation and feature filtration, 11.2651, sec
+2023-08-22 13:37:54,F018,Z,0,iter,0,feat,5328761,5408662, Making Complete Code Target Calls, 15.2106, sec
+2023-08-22 13:38:04,F018,Z,0,iter,0,feat,5328761,5408662, Target Call Location Estimation and iteration end update, 9.89077, sec
+2023-08-22 13:38:04,F018,Z,0,iter,0,feat,5328761,5408662, Iteration summary generation, 0.04205, sec
+2023-08-22 13:38:04,F018,Z,0,iter,0,feat,5328761,5408662, Iteration duration, 55.8875, sec
+2023-08-22 13:38:08,F018,Z,0,iter,1,feat,5328761,5408662, Seed neighbor determination, 8.95145, sec
+2023-08-22 13:38:21,F018,Z,0,iter,1,feat,5328761,5408662, Quality Score Generation, 24.8765, sec
+2023-08-22 13:38:32,F018,Z,0,iter,1,feat,5328761,5408662, Spots per feature calculation and feature filtration, 7.98304, sec
+2023-08-22 13:38:53,F018,Z,0,iter,1,feat,5328761,5408662, Making Complete Code Target Calls, 17.6019, sec
+2023-08-22 13:39:03,F018,Z,0,iter,1,feat,5328761,5408662, Target Call Location Estimation and iteration end update, 8.89612, sec
+2023-08-22 13:39:04,F018,Z,0,iter,1,feat,5328761,5408662, Iteration summary generation, 0.383793, sec
+2023-08-22 13:39:04,F018,Z,0,iter,1,feat,5328761,5408662, Iteration duration, 64.7836, sec
+2023-08-22 13:39:04,F018,Z,0,iter,1,feat,5328761,5408662, Z slice processing duration, 141.976, sec
+2023-08-22 13:40:01,F018,Z,1,iter,0,feat,5347138,10755800, Spot file data loading and filtration , 40.3159, sec
+2023-08-22 13:40:06,F018,Z,1,iter,0,feat,5347138,10755800, Seed neighbor determination, 7.40519, sec
+2023-08-22 13:40:17,F018,Z,1,iter,0,feat,5347138,10755800, Quality Score Generation, 28.349, sec
+2023-08-22 13:40:31,F018,Z,1,iter,0,feat,5347138,10755800, Spots per feature calculation and feature filtration, 10.1142, sec
+2023-08-22 13:40:59,F018,Z,1,iter,0,feat,5347138,10755800, Making Complete Code Target Calls, 21.6632, sec
+2023-08-22 13:41:10,F018,Z,1,iter,0,feat,5347138,10755800, Target Call Location Estimation and iteration end update, 7.58256, sec
+2023-08-22 13:41:10,F018,Z,1,iter,0,feat,5347138,10755800, Iteration summary generation, 0.05936, sec
+2023-08-22 13:41:10,F018,Z,1,iter,0,feat,5347138,10755800, Iteration duration, 72.3309, sec
+2023-08-22 13:41:14,F018,Z,1,iter,1,feat,5347138,10755800, Seed neighbor determination, 7.90266, sec
+2023-08-22 13:41:29,F018,Z,1,iter,1,feat,5347138,10755800, Quality Score Generation, 34.6771, sec
+2023-08-22 13:41:37,F018,Z,1,iter,1,feat,5347138,10755800, Spots per feature calculation and feature filtration, 7.66921, sec
+2023-08-22 13:42:05,F018,Z,1,iter,1,feat,5347138,10755800, Making Complete Code Target Calls, 23.0512, sec
+2023-08-22 13:42:12,F018,Z,1,iter,1,feat,5347138,10755800, Target Call Location Estimation and iteration end update, 6.13542, sec
+2023-08-22 13:42:13,F018,Z,1,iter,1,feat,5347138,10755800, Iteration summary generation, 0.861655, sec
+2023-08-22 13:42:13,F018,Z,1,iter,1,feat,5347138,10755800, Iteration duration, 76.8903, sec
+2023-08-22 13:42:13,F018,Z,1,iter,1,feat,5347138,10755800, Z slice processing duration, 194.092, sec
+2023-08-22 13:42:51,F018,Z,2,iter,0,feat,4484775,15240575, Spot file data loading and filtration , 29.1905, sec
+2023-08-22 13:42:56,F018,Z,2,iter,0,feat,4484775,15240575, Seed neighbor determination, 9.72135, sec
+2023-08-22 13:43:05,F018,Z,2,iter,0,feat,4484775,15240575, Quality Score Generation, 21.5264, sec
+2023-08-22 13:43:17,F018,Z,2,iter,0,feat,4484775,15240575, Spots per feature calculation and feature filtration, 9.13028, sec
+2023-08-22 13:43:44,F018,Z,2,iter,0,feat,4484775,15240575, Making Complete Code Target Calls, 21.4946, sec
+2023-08-22 13:43:57,F018,Z,2,iter,0,feat,4484775,15240575, Target Call Location Estimation and iteration end update, 9.37306, sec
+2023-08-22 13:43:57,F018,Z,2,iter,0,feat,4484775,15240575, Iteration summary generation, 0.045432, sec
+2023-08-22 13:43:57,F018,Z,2,iter,0,feat,4484775,15240575, Iteration duration, 67.542, sec
+2023-08-22 13:44:01,F018,Z,2,iter,1,feat,4484775,15240575, Seed neighbor determination, 6.92439, sec
+2023-08-22 13:44:09,F018,Z,2,iter,1,feat,4484775,15240575, Quality Score Generation, 19.8253, sec
+2023-08-22 13:44:16,F018,Z,2,iter,1,feat,4484775,15240575, Spots per feature calculation and feature filtration, 5.5663, sec
+2023-08-22 13:44:39,F018,Z,2,iter,1,feat,4484775,15240575, Making Complete Code Target Calls, 16.7794, sec
+2023-08-22 13:44:49,F018,Z,2,iter,1,feat,4484775,15240575, Target Call Location Estimation and iteration end update, 8.23203, sec
+2023-08-22 13:44:50,F018,Z,2,iter,1,feat,4484775,15240575, Iteration summary generation, 0.712449, sec
+2023-08-22 13:44:50,F018,Z,2,iter,1,feat,4484775,15240575, Iteration duration, 54.9981, sec
+2023-08-22 13:44:50,F018,Z,2,iter,1,feat,4484775,15240575, Z slice processing duration, 155.75, sec
+2023-08-22 13:45:23,F018,Z,3,iter,0,feat,3834020,19074595, Spot file data loading and filtration , 23.657, sec
+2023-08-22 13:45:27,F018,Z,3,iter,0,feat,3834020,19074595, Seed neighbor determination, 5.21472, sec
+2023-08-22 13:45:37,F018,Z,3,iter,0,feat,3834020,19074595, Quality Score Generation, 18.9975, sec
+2023-08-22 13:45:49,F018,Z,3,iter,0,feat,3834020,19074595, Spots per feature calculation and feature filtration, 7.28293, sec
+2023-08-22 13:46:04,F018,Z,3,iter,0,feat,3834020,19074595, Making Complete Code Target Calls, 12.2287, sec
+2023-08-22 13:46:11,F018,Z,3,iter,0,feat,3834020,19074595, Target Call Location Estimation and iteration end update, 6.8516, sec
+2023-08-22 13:46:11,F018,Z,3,iter,0,feat,3834020,19074595, Iteration summary generation, 0.043359, sec
+2023-08-22 13:46:11,F018,Z,3,iter,0,feat,3834020,19074595, Iteration duration, 48.6529, sec
+2023-08-22 13:46:14,F018,Z,3,iter,1,feat,3834020,19074595, Seed neighbor determination, 6.53201, sec
+2023-08-22 13:46:29,F018,Z,3,iter,1,feat,3834020,19074595, Quality Score Generation, 25.5233, sec
+2023-08-22 13:46:36,F018,Z,3,iter,1,feat,3834020,19074595, Spots per feature calculation and feature filtration, 6.37714, sec
+2023-08-22 13:46:53,F018,Z,3,iter,1,feat,3834020,19074595, Making Complete Code Target Calls, 16.5689, sec
+2023-08-22 13:46:57,F018,Z,3,iter,1,feat,3834020,19074595, Target Call Location Estimation and iteration end update, 3.82987, sec
+2023-08-22 13:46:58,F018,Z,3,iter,1,feat,3834020,19074595, Iteration summary generation, 0.470089, sec
+2023-08-22 13:46:58,F018,Z,3,iter,1,feat,3834020,19074595, Iteration duration, 56.4697, sec
+2023-08-22 13:46:58,F018,Z,3,iter,1,feat,3834020,19074595, Z slice processing duration, 132.299, sec
+2023-08-22 13:47:18,F018,Z,4,iter,0,feat,3286892,22361487, Spot file data loading and filtration , 14.7826, sec
+2023-08-22 13:47:20,F018,Z,4,iter,0,feat,3286892,22361487, Seed neighbor determination, 4.25366, sec
+2023-08-22 13:47:25,F018,Z,4,iter,0,feat,3286892,22361487, Quality Score Generation, 9.64762, sec
+2023-08-22 13:47:34,F018,Z,4,iter,0,feat,3286892,22361487, Spots per feature calculation and feature filtration, 6.33123, sec
+2023-08-22 13:47:49,F018,Z,4,iter,0,feat,3286892,22361487, Making Complete Code Target Calls, 13.2391, sec
+2023-08-22 13:47:54,F018,Z,4,iter,0,feat,3286892,22361487, Target Call Location Estimation and iteration end update, 5.55684, sec
+2023-08-22 13:47:54,F018,Z,4,iter,0,feat,3286892,22361487, Iteration summary generation, 0.032685, sec
+2023-08-22 13:47:54,F018,Z,4,iter,0,feat,3286892,22361487, Iteration duration, 37.3675, sec
+2023-08-22 13:47:57,F018,Z,4,iter,1,feat,3286892,22361487, Seed neighbor determination, 4.41537, sec
+2023-08-22 13:48:07,F018,Z,4,iter,1,feat,3286892,22361487, Quality Score Generation, 22.8862, sec
+2023-08-22 13:48:14,F018,Z,4,iter,1,feat,3286892,22361487, Spots per feature calculation and feature filtration, 4.91578, sec
+2023-08-22 13:48:29,F018,Z,4,iter,1,feat,3286892,22361487, Making Complete Code Target Calls, 10.6991, sec
+2023-08-22 13:48:34,F018,Z,4,iter,1,feat,3286892,22361487, Target Call Location Estimation and iteration end update, 4.61903, sec
+2023-08-22 13:48:34,F018,Z,4,iter,1,feat,3286892,22361487, Iteration summary generation, 0.464811, sec
+2023-08-22 13:48:34,F018,Z,4,iter,1,feat,3286892,22361487, Iteration duration, 46.0804, sec
+2023-08-22 13:48:34,F018,Z,4,iter,1,feat,3286892,22361487, Z slice processing duration, 101.542, sec
+2023-08-22 13:48:54,F018,Z,5,iter,0,feat,2841970,25203457, Spot file data loading and filtration , 17.5106, sec
+2023-08-22 13:48:57,F018,Z,5,iter,0,feat,2841970,25203457, Seed neighbor determination, 4.21915, sec
+2023-08-22 13:49:05,F018,Z,5,iter,0,feat,2841970,25203457, Quality Score Generation, 16.1361, sec
+2023-08-22 13:49:10,F018,Z,5,iter,0,feat,2841970,25203457, Spots per feature calculation and feature filtration, 5.29438, sec
+2023-08-22 13:49:17,F018,Z,5,iter,0,feat,2841970,25203457, Making Complete Code Target Calls, 6.49329, sec
+2023-08-22 13:49:19,F018,Z,5,iter,0,feat,2841970,25203457, Target Call Location Estimation and iteration end update, 1.29636, sec
+2023-08-22 13:49:19,F018,Z,5,iter,0,feat,2841970,25203457, Iteration summary generation, 0.018046, sec
+2023-08-22 13:49:19,F018,Z,5,iter,0,feat,2841970,25203457, Iteration duration, 31.6722, sec
+2023-08-22 13:49:21,F018,Z,5,iter,1,feat,2841970,25203457, Seed neighbor determination, 3.58517, sec
+2023-08-22 13:49:27,F018,Z,5,iter,1,feat,2841970,25203457, Quality Score Generation, 15.2323, sec
+2023-08-22 13:49:32,F018,Z,5,iter,1,feat,2841970,25203457, Spots per feature calculation and feature filtration, 4.35973, sec
+2023-08-22 13:49:48,F018,Z,5,iter,1,feat,2841970,25203457, Making Complete Code Target Calls, 15.2175, sec
+2023-08-22 13:49:52,F018,Z,5,iter,1,feat,2841970,25203457, Target Call Location Estimation and iteration end update, 3.12823, sec
+2023-08-22 13:49:52,F018,Z,5,iter,1,feat,2841970,25203457, Iteration summary generation, 0.263633, sec
+2023-08-22 13:49:52,F018,Z,5,iter,1,feat,2841970,25203457, Iteration duration, 40.153, sec
+2023-08-22 13:49:52,F018,Z,5,iter,1,feat,2841970,25203457, Z slice processing duration, 91.5615, sec
+2023-08-22 13:50:10,F018,Z,6,iter,0,feat,2575590,27779047, Spot file data loading and filtration , 15.3748, sec
+2023-08-22 13:50:11,F018,Z,6,iter,0,feat,2575590,27779047, Seed neighbor determination, 2.89144, sec
+2023-08-22 13:50:14,F018,Z,6,iter,0,feat,2575590,27779047, Quality Score Generation, 7.23339, sec
+2023-08-22 13:50:19,F018,Z,6,iter,0,feat,2575590,27779047, Spots per feature calculation and feature filtration, 4.72699, sec
+2023-08-22 13:50:26,F018,Z,6,iter,0,feat,2575590,27779047, Making Complete Code Target Calls, 6.49848, sec
+2023-08-22 13:50:28,F018,Z,6,iter,0,feat,2575590,27779047, Target Call Location Estimation and iteration end update, 1.87015, sec
+2023-08-22 13:50:28,F018,Z,6,iter,0,feat,2575590,27779047, Iteration summary generation, 0.010233, sec
+2023-08-22 13:50:28,F018,Z,6,iter,0,feat,2575590,27779047, Iteration duration, 22.0485, sec
+2023-08-22 13:50:29,F018,Z,6,iter,1,feat,2575590,27779047, Seed neighbor determination, 2.59072, sec
+2023-08-22 13:50:32,F018,Z,6,iter,1,feat,2575590,27779047, Quality Score Generation, 8.34967, sec
+2023-08-22 13:50:37,F018,Z,6,iter,1,feat,2575590,27779047, Spots per feature calculation and feature filtration, 4.09839, sec
+2023-08-22 13:50:47,F018,Z,6,iter,1,feat,2575590,27779047, Making Complete Code Target Calls, 9.91746, sec
+2023-08-22 13:50:49,F018,Z,6,iter,1,feat,2575590,27779047, Target Call Location Estimation and iteration end update, 2.60537, sec
+2023-08-22 13:50:50,F018,Z,6,iter,1,feat,2575590,27779047, Iteration summary generation, 0.212099, sec
+2023-08-22 13:50:50,F018,Z,6,iter,1,feat,2575590,27779047, Iteration duration, 26.7442, sec
+2023-08-22 13:50:50,F018,Z,6,iter,1,feat,2575590,27779047, Z slice processing duration, 65.968, sec
+2023-08-22 13:51:02,F018,Z,7,iter,0,feat,2447020,30226067, Spot file data loading and filtration , 10.7446, sec
+2023-08-22 13:51:04,F018,Z,7,iter,0,feat,2447020,30226067, Seed neighbor determination, 2.86628, sec
+2023-08-22 13:51:07,F018,Z,7,iter,0,feat,2447020,30226067, Quality Score Generation, 9.03944, sec
+2023-08-22 13:51:12,F018,Z,7,iter,0,feat,2447020,30226067, Spots per feature calculation and feature filtration, 5.27526, sec
+2023-08-22 13:51:21,F018,Z,7,iter,0,feat,2447020,30226067, Making Complete Code Target Calls, 8.39811, sec
+2023-08-22 13:51:22,F018,Z,7,iter,0,feat,2447020,30226067, Target Call Location Estimation and iteration end update, 1.58561, sec
+2023-08-22 13:51:22,F018,Z,7,iter,0,feat,2447020,30226067, Iteration summary generation, 0.017699, sec
+2023-08-22 13:51:22,F018,Z,7,iter,0,feat,2447020,30226067, Iteration duration, 26.2543, sec
+2023-08-22 13:51:24,F018,Z,7,iter,1,feat,2447020,30226067, Seed neighbor determination, 3.32385, sec
+2023-08-22 13:51:27,F018,Z,7,iter,1,feat,2447020,30226067, Quality Score Generation, 7.64369, sec
+2023-08-22 13:51:31,F018,Z,7,iter,1,feat,2447020,30226067, Spots per feature calculation and feature filtration, 3.63149, sec
+2023-08-22 13:51:42,F018,Z,7,iter,1,feat,2447020,30226067, Making Complete Code Target Calls, 9.84372, sec
+2023-08-22 13:51:46,F018,Z,7,iter,1,feat,2447020,30226067, Target Call Location Estimation and iteration end update, 3.42518, sec
+2023-08-22 13:51:46,F018,Z,7,iter,1,feat,2447020,30226067, Iteration summary generation, 0.394078, sec
+2023-08-22 13:51:46,F018,Z,7,iter,1,feat,2447020,30226067, Iteration duration, 26.678, sec
+2023-08-22 13:51:46,F018,Z,7,iter,1,feat,2447020,30226067, Z slice processing duration, 64.9918, sec
+2023-08-22 13:51:46,F018,Z,8,iter,0,feat,57883,30283950, Spot file data loading and filtration , -1.52762, sec
+2023-08-22 13:51:46,F018,Z,8,iter,0,feat,57883,30283950, Seed neighbor determination, 0.094888, sec
+2023-08-22 13:51:46,F018,Z,8,iter,0,feat,57883,30283950, Quality Score Generation, 0.042754, sec
+2023-08-22 13:51:47,F018,Z,8,iter,0,feat,57883,30283950, Spots per feature calculation and feature filtration, 0.117404, sec
+2023-08-22 13:51:47,F018,Z,8,iter,0,feat,57883,30283950, Making Complete Code Target Calls, 0.008484, sec
+2023-08-22 13:51:47,F018,Z,8,iter,0,feat,57883,30283950, Target Call Location Estimation and iteration end update, 0.001908, sec
+2023-08-22 13:51:47,F018,Z,8,iter,0,feat,57883,30283950, Iteration summary generation, 0.000263, sec
+2023-08-22 13:51:47,F018,Z,8,iter,0,feat,57883,30283950, Iteration duration, 0.243648, sec
+2023-08-22 13:51:47,F018,Z,8,iter,1,feat,57883,30283950, Seed neighbor determination, 0.100216, sec
+2023-08-22 13:51:47,F018,Z,8,iter,1,feat,57883,30283950, Quality Score Generation, 0.153291, sec
+2023-08-22 13:51:47,F018,Z,8,iter,1,feat,57883,30283950, Spots per feature calculation and feature filtration, 0.113146, sec
+2023-08-22 13:51:47,F018,Z,8,iter,1,feat,57883,30283950, Making Complete Code Target Calls, 0.008507, sec
+2023-08-22 13:51:47,F018,Z,8,iter,1,feat,57883,30283950, Target Call Location Estimation and iteration end update, 0.00066, sec
+2023-08-22 13:51:47,F018,Z,8,iter,1,feat,57883,30283950, Iteration summary generation, 0.003058, sec
+2023-08-22 13:51:47,F018,Z,8,iter,1,feat,57883,30283950, Iteration duration, 0.351796, sec
+2023-08-22 13:51:47,F018,Z,8,iter,1,feat,57883,30283950, Z slice processing duration, 0.730095, sec
+2023-08-22 13:51:49,F018,Z,8,iter,1,feat,57883,30283950, FOV processing duration (final) , 951.279, sec
