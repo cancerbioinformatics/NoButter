@@ -1,0 +1,95 @@
+---
+title: "Update-Flat-Files"
+date: "2024-07-11"
+output: html_document
+---
+
+
+# Updating flat files
+
+## Clean transcripts file
+
+Check for presence of transcripts that fall outside of cell boundaries (cellID==0)
+```{r}
+table(transcripts$CellId==0)
+```
+
+Calculate the count of transcripts within each specified z stack range
+```{r}
+transcript_counts <- transcripts %>%
+  mutate(z_stacks = case_when(
+    z %in% 0:7 ~ "0 to 7",
+    z %in% 8:9 ~ "8 to 9"
+  )) %>%
+  group_by(z_stacks) %>%
+  summarise(count = n())
+transcript_counts
+```
+
+
+
+Remove transcripts from z stacks 8 and 9 and remove transcripts not contained within cell boundaries
+```{r}
+transcripts_zclean <- transcripts %>%
+  filter(z %in% 0:7 & CellId != 0)
+dim(transcripts_zclean)
+```
+
+
+```{r, echo=FALSE}
+# saving cleaned data
+write.csv(transcripts_zclean, "../input/flat_files/processed/transcripts_zclean.csv")
+```
+
+
+## Generate clean gene expression matrix
+
+PrepareGEXMatrix() function key steps: 
+
+  - remove cells with id == 0 (not within segmentation mask) 
+  - remove SystemControl probes 
+  - keep only z stack between 0:7  
+  - create unique cell id "c_slide_fov_cellID" - crosstab between cell id and target
+
+```{r}
+# Using PrepareGEXMatrix function to generate a clean gene expression matrix
+z_stacks_to_keep <- c(0:7)
+GEX_clean_z_stack <- PrepareGEXMatrix(transcripts, 
+                                      z_stacks = z_stacks_to_keep, 
+                                      output_dir = "../input/flat_files/processed/", 
+                                      save_matrix = TRUE)
+
+GEX_clean_z_stack[1:5, 1:5]
+```
+
+
+
+## Clean metadata and polygons 
+
+The *UpdateMetadataAndPolygons()* function is designed to update and synchronize metadata and polygon files with cleaned gene expression (GEX) data, primarily by filtering and reordering them to match the cleaned dataset.
+
+Key steps in function: 
+
+  - Aligns the metadata and polygons with the cleaned GEX data, including only those entries corresponding to cells present in the GEX data and arranging them in the same order
+  - Recalculates important metrics for the metadata based on the cleaned GEX data, such as total RNA counts, number of features (genes) detected, and counts for both regular and negative control probes.
+
+
+```{r, results='hide', message=FALSE}
+UpdateMetadataAndPolygons(clean_GEX = GEX_clean_z_stack,
+                                           metadata = metadata,
+                                           polygons = "../input/flat_files/polygons.csv",
+                                           save_flat_files = TRUE,
+                                           output_dir = "../input/flat_files/processed/")
+```
+
+# Data analysis ready!
+
+Now that the flat files are cleaned up post-z-stack removal, we are ready to continue our analysis of CosMx data. 
+
+
+If you are interested in learning more about the analysis of CosMx data using these flat files, head to the CosMx_Lite tutorial using [this link.](https://github.com/cancerbioinformatics/CosMx_Lite)
+
+
+```{r}
+sessionInfo()
+```
