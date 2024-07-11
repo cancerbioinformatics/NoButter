@@ -1,0 +1,58 @@
+---
+title: "Plot Transcript Counts"
+date: "2024-07-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Plot Transcript Counts
+
+Next, we introduce a visualization that examines the number of raw transcripts per FOV. This analysis allows us to check the quantity of transcripts present in each FOV, helping us identify any FOVs that may not have performed well. Additionally, this visualization can be tailored to explore data by tissue area or region of interest. By grouping the data by specific areas or regions, we can gain insights into the distribution of transcripts across different tissues or areas, providing a detailed view of transcript abundance in each specified section.
+
+```{r, fig.width=10, fig.height=6}
+# plot number of transcripts per FOV
+PlotTranscriptCounts(transcripts)
+```
+
+
+
+```{r, fig.width=12, fig.height=8}
+# plot tx counts by fov
+PlotTranscriptCounts(transcripts,
+  group_by = "fov",
+  colour_by = "area"
+)
+```
+
+```{r, fig.width=12, fig.height=8}
+# plot number of transcripts by area
+PlotTranscriptCounts(transcripts,
+  group_by = "area",
+  fig_save = TRUE,
+  out_dir = "../output/TranscriptCounts/", 
+  fig_width = 12,
+  fig_height = 8
+)
+```
+
+
+# Plot transcripts by code class
+
+Here, we will analyse transcripts per FOV by code class to determine the proportion of transcripts associated with endogenous probes, negative control probes, or system control probes. This analysis will help us understand how these different categories of transcripts are distributed across the fields of view. 
+
+```{r, fig.width=10, fig.height=6}
+# code class distribution by area
+PlotTranscriptByCodeClass(transcripts)
+```
+
+```{r, fig.width=7, fig.height=6}
+# code class distribution by area
+PlotTranscriptByCodeClass(transcripts, group_by = "area")
+```
+
+
+
