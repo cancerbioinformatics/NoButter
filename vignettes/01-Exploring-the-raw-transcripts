@@ -1,0 +1,101 @@
+---
+title: "Exploring the raw transcripts"
+date: "2024-07-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Exploring the Raw Transcripts 
+
+## Combining Raw Transcripts from each FOV
+
+To analyse the transcript distribution across Z stacks, data containing information about the location of the transcripts and their position across Z stacks is required. Transcript coordinates and cell-specific counts are located in FOV sub-folders present in the AnalysisResults folder of the raw data exports. 
+
+Different types of data formats can be exported from AtoMx using pre-defined and custom workflows. The use of these workflows is not within the scope of this tutorial. We refer the user to the data export guide available from [NanoString University](https://university.nanostring.com) for more details.  
+
+This raw transcript data is used to generate a file containing transcript information from all the Fields of View (FOVs) in the study across Z stacks using the *CombineRawTranscripts()* function.
+
+
+```{r, eval=FALSE, cache=TRUE}
+# loading prerequisites
+library("NoButter")
+library("ggplot2")
+library("grid")
+library("dplyr")
+library("patchwork")
+library("reshape2")
+library("pheatmap")
+```
+
+```{r, eval=FALSE, cache=TRUE}
+# Applying function to combine raw transcripts data from each FOV into one .csv file
+CombineRawTranscripts(in_dir = "../input/AnalysisResult/oxdwyv2woj/",
+                                     out_dir = "../input/combined_transcripts/",
+                                     file_name = "combined_transcripts.csv")
+```
+
+## Exploring the Attributes of the Transcripts File
+
+Now that we have generated the combined transcripts file, we can explore its attributes to understand the structure and contents of our dataset. This step is crucial for verifying that the data has been combined correctly and to gain insights into the available information for subsequent analysis.
+
+First, let's take a look at the raw data to get a sense of its structure and the type of information it contains.
+
+```{r}
+# view transcripts file
+transcripts <- read.csv("../input/combined_transcripts/combined_transcripts.csv") 
+head(transcripts)
+```
+
+```{r}
+# file dimensions
+dim(transcripts)
+```
+
+```{r}
+# view what information is contained within the columns of the transcripts file
+colnames(transcripts)
+```
+
+```{r}
+# removing redundant column 
+transcripts$X <- NULL
+```
+
+
+```{r}
+# check how many z stacks present in the dataset
+unique(transcripts$z)
+```
+
+Exporting data from AtoMx can often result in the "flipping" of transcript co-ordinates. We would recommend checking the orientation of the transcripts and correcting issues accordingly. You can do this by comparing the orientation of the tissue with the flow cell image in AtoMx using the PlotTranscriptsByFOV() function.
+
+```{r, fig.height=7, fig.width=8}
+# check transcripts are correctly orientated 
+PlotTranscriptsByFOV(transcripts,
+                     fov = 1)
+```
+
+For example, if the tissue does not follow the correct orientation on the y-axis, you can correct this by simply "flipping" the y-axis.
+
+```{r}
+# Calculate the maximum value of y + flip the y_mm values
+max_y <- max(transcripts$y)
+transcripts$y <- max_y - transcripts$y
+```
+
+```{r, fig.height=7, fig.width=8}
+# Now my tissue orientation is correct
+PlotTranscriptsByFOV(transcripts,
+                     fov = 1)
+```
+
+
+```{r, include=FALSE}
+# saving corrected transcripts
+write.csv(transcripts, "../input/combined_transcripts/corrected_transcripts.csv")
+```
+
