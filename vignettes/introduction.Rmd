@@ -14,6 +14,38 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+# Introduction
+
+During sample processing with CosMx Spatial Molecular Imager (SMI), detailed images of tissue samples are captured at multiple focal planes along the Z-axix called Z stacks. Each Z stack represents a ~0.8um tissue slice, used to reconstruct a 3D image of the tissue. Z stacks are subsequently collapsed into 2D representations and transferred to the AtoMx Spatial Informatics Platform (SIP), alongside the CosMx data readout, where they are used in the morphology and cell segmentation process.
+
+One of the critical challenges with higher Z stack levels is the non-specificity of transcripts. At these levels, transcripts often appear outside the expected tissue boundaries, suggesting a degree of uncertainty regarding the exact cellular origin of these transcripts. This non-specificity can obscure true biological signals and complicate downstream analysis. 
+
+Noise from non-specific transcripts can lead to inaccurate quantification of gene expression levels, making it challenging to accurately identify and categorise cells based on their transcriptomic profiles. 
+
+To address this challenge, we developed *NoButter*, an R package equipped with tools to analyse the distribution of transcripts across different Z stacks, identify patterns of uneven distribution and compare these to actual tissue structure. 
+
+This tutorial will guide you through the process of cleaning Z stacks using functions from NoButter and reconstruct flat files required for downstream analysis. 
+
+
+## Package installation
+
+To install the package from GitHub, run the following commands in R:
+
+```{r,message=FALSE}
+if (!requireNamespace("devtools", quietly = TRUE)) {
+  install.packages("devtools")
+}
+
+devtools::install_github("cancerbioinformatics/NoButter") # this needs to be changed to cancerbioinformatics github when we make public
+```
+
+## Contact us
+
+This Package was developed and is maintained by the Cancer Bioinformatics Group at King's College London (https://cancerbioinformatics.co.uk). If you have any questions or feedback for this package please contact us at SBF@kcl.ac.uk.
+
+
+## Load Package and get started! 
 ```{r setup}
 library(NoButter)
 ```
