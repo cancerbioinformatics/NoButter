@@ -1,0 +1,155 @@
+---
+title: "Z-Stack investigation "
+date: "2024-07-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Z-Stack investigation 
+
+In this section, we will be evaluating the distribution of transcripts across Z stacks. 
+
+## Number of transcripts per z stack
+
+```{r} 
+# investigating number of transcripts per z stack
+zstack_count_tbl <- table(transcripts$z)
+zstack_count_tbl
+```
+
+```{r, fig.width=9, fig.height=5}
+# visualizing transcripts per z stack
+counts <- setNames(as.data.frame(zstack_count_tbl), c("z", "Count"))
+ggplot(data = counts, aes(x = z, y = Count)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Transcripts per Z Stack", x = "Z Stack", y = "Count") +
+  scale_y_continuous(labels = scales::comma) +
+  theme_custom()
+```
+
+## Proportion of transcripts per z stack
+
+```{r}
+# proportion of transcripts per z stack
+zstack_prop_tbl <- round(table(transcripts$z)*100/nrow(transcripts), 3)
+zstack_prop_tbl
+```
+
+```{r}
+# proportion of transcripts per z stack
+prop <- setNames(
+  as.data.frame(round(table(transcripts$z) * 100 / nrow(transcripts), 3)),
+  c("z_stack", "Proportion")
+)
+
+ggplot(prop, aes(x = 2, y = Proportion, fill = z_stack)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar(theta = "y") +
+  labs(title = "Proportion of transcripts per z stack") +
+  theme_void() +
+  theme(legend.position = "right")
+```
+
+
+## Distribution of transcripts per z stack per FOV
+
+Using the example data, we can see that the majority of transcripts are captured in z stacks 1-4, with few captured in the higher z stack levels. Transcripts are captured in only 3 FOVs for Z stack 9. The number of transcripts per Z stack is expected to be quite evenly distributed per Z stack, but as is evident in this dataset, this is not the case. To further investigate this, we will next look at how the transcripts are distributed across each Z stack per FOV.
+
+```{r}
+VisualizeZStackDistribution(transcripts)
+```
+
+
+```{r}
+VisualizeZStackDistribution(transcripts, binarised = TRUE)
+```
+
+
+## View Transcripts Per Z Stack across FOVs
+
+In Z stack 0, we observe the fewest transcripts; however, they are confined within the tissue boundaries, indicating specific localisation. From Z stacks 1 through 7, the distribution of transcripts is uniform and remains within these boundaries, suggesting consistent data quality across these levels. In contrast, Z stack 8 shows a noticeable shift where transcripts extend beyond the expected tissue boundaries. This horizontal dispersion of transcripts suggests a loss of specificity to particular cells, likely introducing noise into the dataset. To mitigate this issue and enhance the reliability of our analysis, we will exclude Z stack 8 from downstream processing and only utilise data from Z stacks 0 through 7.
+
+```{r,  fig.width=10, fig.height=8, message=FALSE, warning=FALSE,results='hide'}
+# plotting transcript distribution per Z stack across FOVs
+fovs <- c(32, 34, 47, 57, 61)
+ZPlot(transcripts, fovs)
+```
+
+
+# Evaluating transcript exclusion
+
+In this section, we examine the implications of excluding certain Z stacks from our spatial transcriptomic analysis. Omitting these layers can potentially result in significant data loss, impacting our understanding of gene expression patterns in three dimensions.
+
+
+## Proportion of transcripts that will be lost when we limit our data processing to Z stacks 0 through 7. 
+
+```{r, fig.width=9, fig.height=7}
+# proportion of endogenous transcripts kept
+PlotTranscriptLossProportion(transcripts, 
+                             keep_z_stacks = c(0:7))
+```
+
+## Summarise number of transcripts lost
+
+```{r}
+# specify the fovs to keep
+keep_zstack <- 0:7
+
+# filter and summarise data
+summary_data <- transcripts %>%
+  mutate(Category = ifelse(z %in% keep_zstack, "Kept", "Lost")) %>%
+  group_by(Category) %>%
+  summarise(
+    Count = n(),
+    Percentage = (n() / nrow(transcripts)) * 100
+  ) %>%
+  ungroup()
+
+print(summary_data)
+```
+
+Removing Z stacks 8 and 9 results in a loss of 3.5% of transcripts with uncertain localisation within the tissue. 
+
+
+## Investigating transcript exclusion by FOV
+
+```{r, fig.width=11, fig.height=7}
+# Here we look at both the impact of transcript removal alongside transcripts that were not assigned to a cell (cellID=0)
+transcripts %>% 
+  filter(fov == 32) %>%
+  ggplot(aes(x=x, y=y, colour=CellId>0)) + 
+  geom_point(size=0.1)  + 
+  facet_wrap(~z %in% c(0:7))
+```
+
+```{r, fig.width=11, fig.height=7}
+# View distribution transcripts that will be kept in specific
+transcripts %>% 
+  filter(fov == 32) %>%
+  ggplot(aes(x=x, y=y, z %in% c(0:7))) + 
+  geom_point(size=0.1)  + 
+  facet_wrap(~z %in% c(0:7))
+```
+
+```{r, fig.width=11, fig.height=7}
+transcripts %>% 
+  filter(fov == 57) %>%
+  ggplot(aes(x=x, y=y, z %in% c(0:7))) + 
+  geom_point(size=0.1)  + 
+  facet_wrap(~z %in% c(0:7))
+```
+
+
+## Plot Raw Transcripts Outside of Cell Boundaries
+
+```{r, fig.width=11, fig.height=7}
+transcripts %>% filter(fov == 57) %>%
+ggplot( aes(x=x,y=y, colour=CellId>0)) + geom_point(size=0.1)  + facet_wrap(~ CellId>0)
+
+transcripts %>% filter(fov == 57) %>%
+ggplot( aes(x=x,y=y, colour=z %in% c(0:7))) + geom_point(size=0.1)  + facet_wrap(~z %in% c(0:7))
+```
+
