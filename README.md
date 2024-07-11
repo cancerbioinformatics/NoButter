@@ -12,5 +12,5 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
   install.packages("devtools")
 }
 
-devtools::install_github("BeibhinnOH/NoButter")
+devtools::install_github("cancerbioinformatics/NoButter")
 ```
